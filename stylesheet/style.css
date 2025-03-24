@@ -1,0 +1,325 @@
+:root {
+  --white: #fff;
+  --font: rgba(23, 23, 23, 255);
+  --font-span: rgb(11, 104, 163);
+  --background-clr: rgba(52, 52, 62, 255);
+  --shadow-color: rgba(47, 47, 47, 255);
+  --background-semu-white: rgb(250, 250, 250);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--primary-color);
+}
+
+/*  navbar  */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 4%;
+
+  background-color: var(--background-semu-white);
+  box-shadow: 0px 15px 10px -20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+/*command untuk mengatur ukuran dan style pada logo*/
+.navbar-logo .logo {
+  font-size: 32px;
+  font-weight: 800;
+  font-style: italic;
+  color: var(--font);
+}
+/*command untuk menganti warna pada command span pada logo*/
+.navbar-logo .logo span {
+  color: var(--font-span);
+}
+/*command untuk mengatur ukuran font nav menu*/
+.navbar-menu a {
+  color: var(--font);
+  display: inline-block;
+  font-size: 13px;
+  margin: 0 16px;
+  font-weight: 300;
+}
+/*command ketika mendekati nav menu akan merubah warna */
+.navbar-menu a:hover {
+  color: var(--font-span);
+}
+/*command untuk mengatur warna dasar pada nav menu*/
+.navbar-menu a::after {
+  content: "";
+  display: block;
+  padding-bottom: 2px;
+  border-bottom: 1px solid var(--font-span);
+  transform: scaleX(0);
+}
+/*command untuk membuat animasi garis bawah pada nav menu*/
+.navbar-menu a:hover::after {
+  transform: scaleX(0.5);
+  transition: 0.3s linear;
+}
+/*command untuk mengatur warna dasar menu*/
+.navbar-extra {
+  position: absolute;
+  right: -980px;
+}
+.navbar-extra a {
+  color: var(--font);
+  margin: 0 0.5rem;
+}
+/*command ketika mendekati menu akan merubah warna*/
+.navbar-extra a:hover {
+  color: var(--font-span);
+}
+/*command untuk menghilangkan menu pada mode desktop*/
+#menu {
+  display: none;
+}
+/*command untuk mengatur ukuran halaman pertama, gambar*/
+.main-layout {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: url(../image/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+/*command untuk mengatur jarak padding pada halaman pertama*/
+.main-wrapper {
+  padding-top: 50px;
+}
+/*command untuk mengatur ukuran,warna dan jarak header*/
+.main-wrapper h5 {
+  font-weight: 700;
+  font-size: 30px;
+  color: var(--font);
+  line-height: 0.8;
+}
+/*command untuk mengatur ukuran, warna dan jarak header*/
+.main-wrapper h2 {
+  font-weight: 900;
+  font-size: 50px;
+  color: var(--font);
+  line-height: 1;
+}
+.main-wrapper h2 span {
+  color: var(--font-span);
+}
+/*command untuk mengatur ukuran,warna dan jarak paragraf*/
+.main-wrapper p {
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--font);
+  line-height: 2.3;
+}
+/*command untuk mengatur tinggi halaman kedua dan posisi*/
+.about-layout {
+  min-height: 100vh;
+  padding: 13rem 12% 1.4rem;
+}
+/*command untuk membuat element di dala row berbaris*/
+.about-layout .row {
+  display: flex;
+}
+/*command untu membuat ukuran lebar gambar halaman dua*/
+.image-wrapper img {
+  width: 35rem;
+}
+/*untuk mengatur jarak pada element artikel*/
+.about-wrapper {
+  padding-left: 20px;
+  margin-right: 70px;
+  padding-top: 20px;
+  transform: translate(0, 20%);
+  line-height: 3.8rem;
+}
+/*command untuk mengubah warna element di span*/
+.about-wrapper h2 span {
+  color: var(--font-span);
+}
+/*command untuk mengatur ukuran,warna, dan text-align*/
+.about-wrapper h2 {
+  color: var(--font);
+  font-weight: 800;
+  font-size: 50px;
+  text-align: left;
+}
+/*command untuk mengatur ukuran,warna dan text align*/
+.about-wrapper p {
+  line-height: 1.4rem;
+  text-align: left;
+  font-weight: 400;
+  color: var(--font);
+  font-size: 14px;
+}
+/*COMMAND UNTUK PORTFOLIO*/
+.portfolio-layout {
+  min-height: 100vh;
+  background-color: rgb(245, 245, 245);
+  padding: 7rem 4% 1.4rem;
+}
+.title-wrapper h2 {
+  color: var(--font);
+  font-size: 50px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.title-wrapper h2 span {
+  color: var(--font-span);
+}
+/*command untuk section contact*/
+.contact-layout {
+  min-height: 60vh;
+  display: flex;
+  padding: 3rem 8%;
+}
+/*command untuk mengatur ukuran dan jarak pada text-wrapper*/
+.text-wrapper {
+  flex: 0.6;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+/*command untuk mengatur ukuran font dan warna pada element h2*/
+.text-wrapper h2 {
+  font-size: 50px;
+  font-weight: 800;
+  color: var(--font);
+}
+/*command untuk mengatur warna font pada element h2 span*/
+.text-wrapper h2 span {
+  color: var(--font-span);
+}
+/*command untuk mengatur ukuran font element p*/
+.text-wrapper p {
+  font-size: 14px;
+}
+/*command untuk mengatur ukuran dan jarak pada form-wrapper*/
+.form-wrapper {
+  flex: 1.4;
+  padding-left: 20px;
+  margin-left: 7rem;
+}
+/*command untuk mengatur ukuran dan lebar element baris input, mengatur warna background warna dan bayangan*/
+.input-group input {
+  padding: 12px;
+  width: 39rem;
+  border-radius: 12px;
+  -moz-box-shadow: 0px 0px 4px var(--shadow-color);
+  -webkit-box-shadow: 0px 0px 4px var(--shadow-color);
+  box-shadow: 0px 0px 4px var(--shadow-color);
+  background-color: var(--background-semu-white);
+}
+/*command untuk mengatur ukuran dan lebar baris element textarea, mengatur warna background dan bayangan*/
+.input-group textarea {
+  padding: 12px;
+  width: 39rem;
+  border-radius: 12px;
+  height: 90px;
+  -moz-box-shadow: 0px 0px 4px var(--shadow-color);
+  -webkit-box-shadow: 0px 0px 4px var(--shadow-color);
+  box-shadow: 0px 0px 4px var(--shadow-color);
+  background-color: var(--background-semu-white);
+}
+/*command untuk mengatur ukuran dan lebar baris pada element button, mengatur warna background dan bayangan*/
+form .btn {
+  padding: 8px 20px;
+  font-size: 14px;
+  border-radius: 16px;
+  font-weight: 500;
+  -moz-box-shadow: 0px 0px 4px var(--shadow-color);
+  -webkit-box-shadow: 0px 0px 4px var(--shadow-color);
+  box-shadow: 0px 0px 4px var(--shadow-color);
+  background-color: var(--font-span);
+  color: var(--white);
+}
+/*command untuk mengatur ukuran dan lebar baris pada element footer-layout, mengatur warna background dan bayangan*/
+.footer-layout {
+  padding: 1rem 12% 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--font-span);
+  box-shadow: 0px -15px 10px -20px;
+}
+/*command untuk mengubah warna font dan ukuran font*/
+.footer-layout h3 {
+  color: white;
+  font-size: 16px;
+}
+/*media querry*/
+
+/* tablet 758px atau 960px*/
+
+@media (max-width: 758px) {
+  html {
+    font-size: 75%;
+  }
+  /*command untuk menampilkan icon menu*/
+  #menu {
+    display: inline-block;
+  }
+  /*command untuk menghilangkan nav menu*/
+  .navbar .navbar-menu {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: rgba(250, 250, 250, 255);
+    box-shadow: -15px 0px 10px -18px;
+    width: 20rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+  /*command untuk mengaktifkan navbar menu*/
+  .navbar .navbar-menu.active {
+    right: 0;
+  }
+  /*command untuk membuat setiap element navbar menu lurus*/
+  .navbar-menu a {
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+  }
+  /*command untuk mengatur animasi line pada navbar menu*/
+  .navbar-menu a::after {
+    transform-origin: 0 0;
+  }
+  /*command untuk mengatur jarak animasi line pada navbar menu*/
+  .navbar-menu a:hover::after {
+    transform: scaleX(0.2);
+  }
+  /*command untuk mengatur ketika menggunakan tablet akan menurunkan element div*/
+  .about-layout .row {
+    flex-wrap: wrap;
+  }
+  /*command untuk membuat fokus dan selalu di tengah pada saat di tablet*/
+  .about-layout .row .image-wrapper img {
+    object-fit: cover;
+    object-position: center;
+  }
+  .about-layout .row .about-wrapper {
+    padding: 0;
+  }
+  .about-layout .row .about-wrapper p {
+    margin-top: 1rem;
+    font-size: 13px;
+  }
+}
